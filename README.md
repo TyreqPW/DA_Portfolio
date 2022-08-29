@@ -1,4 +1,4 @@
-# Project 1: Human Resources Data Analysis
+# [Project 1: Human Resources Data Analysis](https://github.com/TyreqPW/DA_Portfolio/blob/0594cd9ad7d482a2c1edbdd0bbdc8a42b9ea217d/Project1Analysis.md)
 
 ## Description:
 The the single CSV file came from https://www.kaggle.com/datasets/rhuebner/human-resources-data-set.
