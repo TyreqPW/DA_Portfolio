@@ -33,3 +33,31 @@ ORDER BY Department
 
 * Not only Production has the most employed but also the most not employed
 * Executive Office is the only department with 1 employee
+
+## 2. What is the sum of gender?
+
+```sql
+
+with Males_tb2 as(
+SELECT 
+COUNT(Sex) Males
+FROM HRSheet
+WHERE Sex = 'Male'
+),
+
+Females_tb2 as(
+SELECT 
+COUNT(Sex) Females
+FROM HRSheet
+WHERE Sex = 'Female'
+)
+
+SELECT 
+(SELECT * FROM Males_tb2) Males,
+Females
+FROM Females_tb2
+```
+
+![Q2](https://user-images.githubusercontent.com/112139192/187102148-8db698db-6913-4bac-a40e-248807cecf3c.PNG)
+
+* There are more females than males
