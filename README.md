@@ -93,5 +93,20 @@ ORDER BY AVGSat desc
 * Employees with performance scores that exceeds are the most satisfied followed behind fully meets
 * Employees that are the least satisfied performance score is PIP
 
+## 5. What is the average employee satisfaction per department?
+
+```sql
+
+SELECT Department, CAST(AVG(EmpSatisfaction) as decimal(18,2)) AVGSat
+FROM HRSheet
+GROUP BY Department
+ORDER BY AVGSat desc
+```
+![Q5](https://user-images.githubusercontent.com/112139192/187102808-b107c722-7a8d-4a11-88c5-15e47955434a.PNG)
+![Q5(2)](https://user-images.githubusercontent.com/112139192/187102982-b36104cc-b992-4819-bd53-45166e832cd1.PNG)
+
+* Employees in Software Engineer department has the most satisfaction on average
+* Executive Office has the least satisfaction (*maybe because there is 1 employee doing all the work*)
+
 
 
