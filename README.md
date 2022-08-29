@@ -114,6 +114,7 @@ ORDER BY AVGSat desc
 
 ### Solution
 * Use ```AVG``` function for EmpSatisfaction to find average employee satisfaction
+* ```CAST``` to remove trailing zeros by 2
 * ```GROUP BY``` PerformanceScore to show average employee satisfaction per performance score
 ---
 ## 5. What is the average employee satisfaction per department?
@@ -131,6 +132,11 @@ ORDER BY AVGSat desc
 * Employees in Software Engineer department has the most satisfaction on average
 * Executive Office has the least satisfaction (*maybe because there is 1 employee doing all the work*)
 
+### Solution
+* Use ```AVG``` on EmpSatisfaction to find average employee satisfaction
+* Use ```Cast``` to remove trailing zeros by 2
+* ```GROUP BY``` Department to show average employee satisfaction per Department
+---
 ## 6. Does employee satisfaction increase when salary increase?
 
 ```sql
@@ -144,6 +150,11 @@ GROUP BY EmpSatisfaction
 
 * When Salary increases, so does employee satisfaction
 
+### Solution
+* ```AVG``` on Salary to find average Salary
+* ```CAST``` to remove trailing zeros by 2
+* ```GROUP BY``` EmpSatisfaction to show average salary per employee satisfaction
+---
 ## 7. What is the percent difference between people who leave and stay per recruitment source?
 
 ```sql
@@ -166,6 +177,16 @@ ORDER BY PercentLeave desc
 
 * Over 50% of employees from Google Search, Diversity Job Fair and Other leave
 
+### Solution
+* Created a subquery in the FROM clause to find total employed and not employed ```GROUP BY``` RecruitmentSource using:
+1. ```CASE``` statement to find who is employed
+2. ```SUM``` function to get total employed
+3. ```COUNT``` DateofTermination to get total not employed
+4. ```WHERE``` clause to filter if DateofTermination is NULL or not
+* Use ```CASE``` statement to filter out the 0 because when you divide by zero you get an error
+* ```CAST``` both NotEmployed and Employed as float to get decimal
+
+---
 ## 8. What is the average salary per gender per department?
 
 ```sql
