@@ -121,6 +121,29 @@ GROUP BY EmpSatisfaction
 
 * When Salary increases, so does employee satisfaction
 
+## 7. What is the percent difference between people who leave and stay per recruitment source?
+
+```sql
+
+SELECT RecruitmentSource,
+(CASE 
+	WHEN NotEmployed = 1 AND Employed = 0 THEN 0 
+	ELSE CAST(CAST(NotEmployed as float)/ CAST(Employed + NotEmployed as float) as decimal(18,2))
+	END) as PercentLeave
+FROM(SELECT
+RecruitmentSource,
+SUM(CASE WHEN DateofTermination IS NULL THEN 1 ELSE 0 END) Employed,
+COUNT(DateofTermination) NotEmployed
+FROM HRSheet
+WHERE DateofTermination IS NOT NULL OR DateofTermination IS NULL
+group by RecruitmentSource) percent_per_recruitmentsource
+ORDER BY PercentLeave desc
+```
+![Q7](https://user-images.githubusercontent.com/112139192/187104178-001cdf6a-d103-461e-98c6-7964b63ebca3.PNG)
+
+* Over 50% of employees from Google Search, Diversity Job Fair and Other leave
+
+
 
 
 
