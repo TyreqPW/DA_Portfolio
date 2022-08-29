@@ -182,7 +182,7 @@ ON Females_tb.Department = Males_tb.Department
 ```
 ![Q8](https://user-images.githubusercontent.com/112139192/187106061-26155fe1-6fe6-4640-b8c9-8b10ea7d2bdc.PNG)
 
-* Females make 9% more on average in Sales department
+* Females make roughly 9% more on average in Sales department
 
 
 
