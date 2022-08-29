@@ -34,13 +34,18 @@ GROUP BY Department
 ORDER BY Department
 ```
 
-```DISTINCT```
-
 ![Q1](https://user-images.githubusercontent.com/112139192/187101924-c624ceb4-6d40-46d2-9547-e9bd3d9eed90.PNG)
 
 * Not only Production has the most employed but also the most not employed
 * Executive Office is the only department with 1 employee
 
+### Solution
+* I use the ```CASE``` statement to find null values in DateofTermination and replacing them with 1 to get the Total number of people that are employed
+*  ```WHERE``` clause for DateofTermination filtering if the values are NULL or not
+* Use ```COUNT``` to see who is not employed
+* Used another ```CASE``` statement and added the ```COUNT``` of DateofTermination to find the total
+* ```GROUP BY``` to find the total of employed and not employed per department
+---
 ## 2. What is the sum of gender?
 
 ```sql
@@ -69,6 +74,10 @@ FROM Females_tb2
 
 * There are more females than males
 
+### Solution
+* Created two ```CTE``` tables named Males_tb 2 and Females_tb2 to find the total number for each Sex
+* Using the ```CTE``` Females_tb2 table, created a nested subquery inside the ```SELECT``` statement to show the total Males
+---
 ## 3. What is the sum of races per recruitment source?
 
 ```sql
