@@ -185,7 +185,6 @@ ORDER BY PercentLeave desc
 4. ```WHERE``` clause to filter if DateofTermination is NULL or not
 * Use ```CASE``` statement to filter out the 0 because when you divide by zero you get an error
 * ```CAST``` both NotEmployed and Employed as float to get decimal
-
 ---
 ## 8. What is the average salary per gender per department?
 
@@ -227,6 +226,15 @@ ON Females_tb.Department = Males_tb.Department
 ![Q8](https://user-images.githubusercontent.com/112139192/187106061-26155fe1-6fe6-4640-b8c9-8b10ea7d2bdc.PNG)
 
 * Females make roughly 9% more on average in Sales department
+
+### Solution
+* Created two ```CTE``` tables called Males_tb and Females_tb
+1. Find total Males and Females using ```COUNT```
+2. Using ```AVG``` on Salary for both Males and Females table
+3. ```GROUP BY``` Department
+* Use ```CASE``` to Filter out 0 in Avg_Sal_Males column because dividing by 0 causes an error
+* ```FULL OUTER JOIN``` Females_tb and Males_tb ```ON``` Department because the Females table has 1 row that isn't in the Males table
+
 
 
 
