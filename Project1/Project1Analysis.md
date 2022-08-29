@@ -18,4 +18,15 @@ to properly display the values.
 ![Q(4)(2)](https://user-images.githubusercontent.com/112139192/187317673-60915783-ec10-4da1-a471-6617d02ff825.PNG)
 
 
-created another sheet to delimite by comma for each symptom
+Then I delimited by comma for each symptom so I can count each individual symptom
+
+![Q(5)](https://user-images.githubusercontent.com/112139192/187318127-8134bf38-fb26-40bf-8701-fe98b5395038.PNG)
+![Q(5)(2)](https://user-images.githubusercontent.com/112139192/187318221-2f840599-21e2-4061-8d47-3218a2216222.PNG)
+
+Finally I used a series of IFS functions to categorize each symptom
+
+![Q(6)](https://user-images.githubusercontent.com/112139192/187318781-a92fd8ee-b869-483c-ac8f-ddf46841e306.PNG)
+![Q(6)(2)](https://user-images.githubusercontent.com/112139192/187319062-15c782ab-3385-4aeb-8759-40a55d655df7.PNG)
+
+
+Note: There were numerous IFS functions to categorize each symptoms. I know there is a easier way to do this but at the time I settled with that
