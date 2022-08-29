@@ -94,6 +94,9 @@ ORDER By RecruitmentSource
 * Most of the people hired came from Indeed
 * Diversity Job Fair is the only recruitment source with 100% Black or African American 
 
+### Solution
+* Use ```COUNT``` to get total race count ```GROUP BY``` RecruitmentSource and RaceDesc column
+---
 ## 4. What is the average employee satisfaction per performance score?
 
 ```sql
@@ -109,6 +112,10 @@ ORDER BY AVGSat desc
 * Employees with performance scores that exceeds are the most satisfied followed behind fully meets
 * Employees that are the least satisfied performance score is PIP
 
+### Solution
+* Use ```AVG``` function for EmpSatisfaction to find average employee satisfaction
+* ```GROUP BY``` PerformanceScore to show average employee satisfaction per performance score
+---
 ## 5. What is the average employee satisfaction per department?
 
 ```sql
