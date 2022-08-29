@@ -1,3 +1,5 @@
+# [Analysis](https://github.com/TyreqPW/DA_Portfolio/blob/main/Portfolio1/Project1Analysis.md)
+
 ## Description:
 The the single CSV file came from https://www.kaggle.com/datasets/rhuebner/human-resources-data-set.
 The file was used for Human Resource Management students at New England College of Business to
