@@ -6,11 +6,30 @@ The file was used for Human Resource Management students at New England College 
 work on data visualization on Tableau.
 
 ### :pushpin: Questions: :pushpin:
-#### 1. How many people are employed and not employed per department
-#### 2. What is the sum of gender
+#### 1. How many people are employed and not employed per department?
+#### 2. What is the sum of gender?
 #### 3. How many people there are per recruitment source?
 #### 4. What is the average employee satisfaction per performance score?
 #### 5. What is the average employee satisfaction per department?
 #### 6. Does employee satisfaction increase when salary increase?
 #### 7. What is the percent difference between people who leave and stay per recruitment source?
 #### 8. What is the average salary per gender per department?
+
+## 1. How many people are employed and not employed per department?
+
+```sql
+
+SELECT Department,
+SUM(CASE WHEN DateofTermination IS NULL THEN 1 ELSE 0 end) as StillEmployed, 
+Count(DateofTermination) NotEmployed,
+SUM(CASE WHEN DateofTermination IS NULL THEN 1 ELSE 0 end) + Count(DateofTermination) as Total
+FROM HRSheet 
+WHERE DateofTermination IS NOT NULL OR DateofTermination IS NULL 
+GROUP BY Department
+ORDER BY Department
+```
+
+![Q1](https://user-images.githubusercontent.com/112139192/187101924-c624ceb4-6d40-46d2-9547-e9bd3d9eed90.PNG)
+
+* Not only Production has the most employed but also the most not employed
+* Executive Office is the only department with 1 employee
