@@ -108,5 +108,19 @@ ORDER BY AVGSat desc
 * Employees in Software Engineer department has the most satisfaction on average
 * Executive Office has the least satisfaction (*maybe because there is 1 employee doing all the work*)
 
+## 6. Does employee satisfaction increase when salary increase?
+
+```sql
+
+SELECT EmpSatisfaction, CAST(AVG(Salary) as decimal(18,2)) Salary_Avg
+FROM HRSheet
+GROUP BY EmpSatisfaction
+```
+![Q6](https://user-images.githubusercontent.com/112139192/187103946-75a1dd3a-5341-4e6e-82b7-14ee17bee604.PNG)
+![Q6(2)](https://user-images.githubusercontent.com/112139192/187103977-57b79577-5526-4e1b-a1e8-7408b2143a19.PNG)
+
+* When Salary increases, so does employee satisfaction
+
+
 
 
