@@ -14,7 +14,12 @@ work on data visualization on Tableau.
 #### 6. Does employee satisfaction increase when salary increase?
 #### 7. What is the percent difference between people who leave and stay per recruitment source?
 #### 8. What is the average salary per gender per department?
+---
+First, I went into excel and change every M to Male and F to Female in Sex column using Find and Replace
 
+![ExcelMF](https://user-images.githubusercontent.com/112139192/187109115-8484b854-b827-4ce0-a1d8-6d4ac4dbc7eb.PNG)
+![ExcelMF(fixed)](https://user-images.githubusercontent.com/112139192/187109171-746d6e46-7906-4a72-9e9d-2840a285d95b.PNG)
+---
 ## 1. How many people are employed and not employed per department?
 
 ```sql
@@ -28,6 +33,8 @@ WHERE DateofTermination IS NOT NULL OR DateofTermination IS NULL
 GROUP BY Department
 ORDER BY Department
 ```
+
+```DISTINCT```
 
 ![Q1](https://user-images.githubusercontent.com/112139192/187101924-c624ceb4-6d40-46d2-9547-e9bd3d9eed90.PNG)
 
