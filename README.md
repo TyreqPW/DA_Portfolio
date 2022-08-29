@@ -143,6 +143,47 @@ ORDER BY PercentLeave desc
 
 * Over 50% of employees from Google Search, Diversity Job Fair and Other leave
 
+## 8. What is the average salary per gender per department?
+
+```sql
+
+with Males_tb as(
+SELECT 
+Department,
+COUNT(Sex) Males,
+CAST(AVG(Salary) as decimal(18,2)) Avg_Sal_Males
+FROM HRSheet
+WHERE Sex = 'Male'
+GROUP BY Department
+),
+
+Females_tb as(
+SELECT 
+Department,
+COUNT(Sex) Females,
+CAST(AVG(Salary) as decimal(18,2)) Avg_Sal_Females
+FROM HRSheet
+WHERE Sex = 'Female'
+GROUP BY Department
+)
+
+SELECT 
+Females_tb.Department, 
+Females, 
+Avg_Sal_Females, 
+Males, 
+Avg_Sal_Males,
+CAST(ROUND((CASE WHEN Avg_Sal_Males IS NULL THEN 0
+ELSE ((Avg_Sal_Females-Avg_Sal_Males)/ Avg_Sal_Males)
+END), 2) AS decimal(18,2)) as percent_diff
+FROM Females_tb
+FULL OUTER JOIN Males_tb
+ON Females_tb.Department = Males_tb.Department
+```
+![Q8](https://user-images.githubusercontent.com/112139192/187106061-26155fe1-6fe6-4640-b8c9-8b10ea7d2bdc.PNG)
+
+* Females make 9% on average in Sales department
+
 
 
 
