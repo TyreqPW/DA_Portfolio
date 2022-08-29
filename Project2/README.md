@@ -1,4 +1,4 @@
-# [Human Resources Analysis](https://github.com/TyreqPW/DA_Portfolio/blob/main/Portfolio1/Project1Analysis.md)
+# [Human Resources Analysis](https://github.com/TyreqPW/DA_Portfolio/blob/main/Project2/Project2Analysis.md)
 ![image](https://user-images.githubusercontent.com/112139192/187117304-24d79e62-4e41-46ab-8392-6f219e3e91ea.png)
 
 ## Description:
