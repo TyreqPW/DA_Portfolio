@@ -78,4 +78,20 @@ ORDER By RecruitmentSource
 * Most of the people hired came from Indeed
 * Diversity Job Fair is the only recruitment source with 100% Black or African American 
 
+## 4. What is the average employee satisfaction per performance score?
+
+```sql
+
+SELECT PerformanceScore, CAST(AVG(EmpSatisfaction) as decimal(18,2)) AVGSat
+FROM HRSheet
+GROUP BY PerformanceScore
+ORDER BY AVGSat desc
+```
+![Q4](https://user-images.githubusercontent.com/112139192/187102468-3bc2f60f-4a1d-4b54-88ea-52d39856542c.PNG)
+![Q4(2)](https://user-images.githubusercontent.com/112139192/187102475-b495f420-4954-4e36-8966-826606c7e074.PNG)
+
+* Employees with performance scores that exceeds are the most satisfied followed behind fully meets
+* Employees that are the least satisfied performance score is PIP
+
+
 
