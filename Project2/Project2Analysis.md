@@ -218,3 +218,21 @@ ON Females_tb.Department = Males_tb.Department
 * Use ```CASE``` to Filter out 0 in Avg_Sal_Males column because dividing by 0 causes an error
 * ```FULL OUTER JOIN``` Females_tb and Males_tb ```ON``` Department because the Females table has 1 row that isn't in the Males table
 
+# BONUS
+
+The average time it will take for you to not be employed in this workplace is 1264 days or 3.5 years!
+
+```sql
+
+SELECT 
+AVG(num_days) Avg_Day__Till_Termination
+FROM(SELECT DateofHire,
+DateofTermination,
+DATEDIFF(day, DateofHire, DateofTermination) num_days
+FROM HRSheet
+WHERE DateofTermination IS NOT NULL) avg_num_days_till_termination
+```
+
+### Solution
+
+I used a sub-query in the ```FROM``` clause and used the ```DATEDIFF``` function to find the difference in date hired and date terminated in days filtering Date of termination in the ```WHERE``` clause to not show any NULL values because that would mean they are still employed. Then in the main query I used the ```AVG``` function to find the average number of days employees would work for.
