@@ -29,4 +29,12 @@ Finally I used a series of IFS functions to categorize each symptom
 ![Q(6)(2)](https://user-images.githubusercontent.com/112139192/187319062-15c782ab-3385-4aeb-8759-40a55d655df7.PNG)
 
 
-Note: There were numerous IFS functions to categorize each symptoms. I know there is a easier way to do this but at the time I settled with that
+***Note: There were numerous IFS functions to categorize each symptoms. I know there is a easier way to do this but at the time I settled with that**
+
+## Created 6 pivot tables to create a dashboard
+* Sum of Confirmed Cases per Country
+* Max Hospitalized per Country
+* Travel History per Country
+* Sum of Confirmed Cases per Country (Geography Map)
+* Total Symptoms 
+* 
