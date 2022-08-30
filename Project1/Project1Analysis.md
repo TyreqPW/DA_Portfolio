@@ -41,4 +41,37 @@ Finally I used a series of IFS functions to categorize each symptom
 
 ![Q(7)](https://user-images.githubusercontent.com/112139192/187341107-cc7fbebb-0ce7-4dc6-967d-9e236253734f.PNG)
 
+## 1. What Country has the highest number of cases?
+
+![Q1](https://user-images.githubusercontent.com/112139192/187341676-b61b08ec-2673-4e89-bcec-5ef0d4a5db89.PNG)
+
+United States has the highest number of cases at 17,336
+
+## 2. What symptom occurs the most?
+
+![Q2](https://user-images.githubusercontent.com/112139192/187341781-b64eb01f-23c5-4f93-9343-4b1e2187af04.PNG)
+
+Fatigue occurs the most amongst the other symptoms at 66
+
+## 3. What Country has the most travelers?
+
+![Q3](https://user-images.githubusercontent.com/112139192/187341983-dc150266-e302-4741-ac73-f77c633a2aca.PNG)
+
+United States has the most travelers at 41
+
+## 4. What Country has the most non travelers?
+
+Just like the previous question, United States and leading with the most non travelers at 11
+
+## 5. Total number of hospitalizations within countries worldwide?
+
+![Q4](https://user-images.githubusercontent.com/112139192/187342330-1a189c2c-948c-4261-8d2e-e588ffcfeacb.PNG)
+
+Italy and Germany are leading with the most hospitalizations at 18
+
+Interestingly United States has the most number of cases worldwide but has 4 hospitalizations
+
+
+
+
 
