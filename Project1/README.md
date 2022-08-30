@@ -11,8 +11,11 @@ The three files show:
 ## For my first project, I used two csv files which were the *Daily confirmed cases within countries worldwide* and the *Moneypox cases worldwide.*
 
 ### :pushpin: Questions: :pushpin:
-#### 1. Total number of cases within countries worldwide
-#### 2. Total number of hospitalizations within countries worldwide
-#### 3. Travel history between countries
-#### 4. Total number of symptoms
+#### 1. What Country has the highest number of cases?
+#### 2. What symptom occurs the most?
+#### 3. What Country has the most travelers?
+#### 4. What Country has the most non travelers?
+#### 5. Total number of hospitalizations within countries worldwide?
+#### 6. Travel history between countries?
+#### 7. Total number of symptoms?
 
