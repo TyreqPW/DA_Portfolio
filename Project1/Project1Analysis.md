@@ -37,4 +37,8 @@ Finally I used a series of IFS functions to categorize each symptom
 * Travel History per Country
 * Sum of Confirmed Cases per Country (Geography Map)
 * Total Symptoms 
-* 
+* Total Cases, Total Hospitalized, Total Travelers, Total Non-Travelelers
+
+![Q(7)](https://user-images.githubusercontent.com/112139192/187341107-cc7fbebb-0ce7-4dc6-967d-9e236253734f.PNG)
+
+
