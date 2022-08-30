@@ -16,6 +16,5 @@ The three files show:
 #### 3. What Country has the most travelers?
 #### 4. What Country has the most non travelers?
 #### 5. Total number of hospitalizations within countries worldwide?
-#### 6. Travel history between countries?
-#### 7. Total number of symptoms?
+#### 6. Total number of symptoms?
 
