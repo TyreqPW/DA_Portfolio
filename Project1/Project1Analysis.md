@@ -71,7 +71,13 @@ Italy and Germany are leading with the most hospitalizations at 18
 
 Interestingly United States has the most number of cases worldwide but has 4 hospitalizations
 
+## 6. Total number of symptoms?
 
+![Q6](https://user-images.githubusercontent.com/112139192/187343139-77b0be07-437f-44ab-8df2-136de90e0c68.PNG)
+
+Total number of symptoms are 151
+
+This number is fairly low, for example, inside the CSV file, Worldwide_Case_Detection_Timeline, in the symptoms column most of the entries are blank and I assume it's because most of the people don't show symptoms. If that's the case then majority of people won't show any symptoms.
 
 
 
