@@ -198,6 +198,19 @@ ORDER BY avg_salary desc
 
 ![Q8(chart)](https://user-images.githubusercontent.com/112139192/190545977-473f7293-9783-47dd-a375-6a42dfa7da2b.PNG)
 
+* Russia is leading with the highest average salary at $157,500.
+* United States is followed behind at $144,055 and New Zealand
+* **NOTE** Russia only has two employees with the highest average salary while United States has 355 with the second. This dataset could drastically change if there was more data inputed within each country to even out the data or the dataset is bias.
+
+## Solution
+
+* Projected company_location from the ds_location table
+* Find the average salary by using the ```AVG``` function on the salary_in_usd column then used ```CAST``` to change the datatype to put two decimal places at the end of the value.
+* ```GROUP BY``` company_location to find the average salary per country
+* ```ORDER BY``` avg_salary alias in descending order
+
+
+
 
 
 
