@@ -134,24 +134,72 @@ ORDER BY work_year ASC
 
 ## 6. What company size occurs the most
 
-```SQL
-SELECT 
+```SELECT 
 company_size,
 COUNT(company_size) as count_of_company_size
 FROM DSsalaries..ds_salaries
 GROUP BY company_size
-ORDER BY company_size asc
+ORDER BY count_of_company_size desc
 ```
 ![Q6](https://user-images.githubusercontent.com/112139192/190541505-5be5b242-362d-4b68-9ba3-af614077ede9.PNG)
 
 ![Q6(chart)](https://user-images.githubusercontent.com/112139192/190541950-aac0ea59-db58-4b1b-83d4-459f46f9031b.PNG)
+
+* Medium company size has the most employees at 326 and accounts for more than half of total employees at 54%
 
 ## Solution
 
 * Projected company_size column from ds_salaries table
 * ```COUNT``` to find total number of employees
 * ```GROUP BY``` company_size column to find total number of employees for each company size
-* ```ORDER BY``` company size in ascending order
+* ```ORDER BY``` count_of_company_size in descending order
 
-## 7. What is the percentage of jobs that work remote
+## 7. What is the percentage of jobs that employees worked remote
+
+```SQL
+SELECT 
+remote_ratio,
+COUNT(remote_ratio) as count_of_remote_ratio,
+ROUND(CAST(COUNT(remote_ratio) as float) / CAST((SELECT SUM(remote_ratio_count) AS total 
+FROM 
+(SELECT remote_ratio, COUNT(remote_ratio) as remote_ratio_count
+FROM DSsalaries..ds_salaries 
+GROUP BY remote_ratio) count_per_remote_ratio) as float), 2) * 100 as percentage_total
+FROM DSsalaries..ds_salaries
+GROUP BY remote_ratio
+```
+![Q7](https://user-images.githubusercontent.com/112139192/190542703-d853f56e-96f8-4a1c-a8f4-7c1f6e529f61.PNG)
+
+* Working fully remote has the highest percentage at 63%
+* Working on job is at 21%
+* Working remote and on job half of the time is 16%
+
+## Solution
+
+* Created a subquery that finds the total employees using ```COUNT``` on remote_ratio column with the alias of remote_ratio_count. Then using ```GROUP BY``` function to find the total employees per remote ratio.
+* Projected remote_ration column from the ds_salaries table
+* ```COUNT``` function on remote_ratio to show total amount of employees per remote ratio
+* ```ROUND``` function with the ```CAST``` function to convert the remote_ratio into a float and used the ```COUNT``` function then divided that from another inner query that would return the total number of employees to get the percentage per remote ratio
+* Multiply the returned value by 100
+* ```GROUP BY``` remote_ratio to show the number of employees per remote ratio
+
+## 8. What is the average salary per country?
+
+```SQL
+SELECT 
+company_location,
+CAST(AVG(salary_in_usd) as decimal(18,2)) AS avg_salary
+FROM DSsalaries..ds_salaries
+GROUP BY company_location
+ORDER BY avg_salary desc
+```
+
+![Q8](https://user-images.githubusercontent.com/112139192/190545903-b94fdff9-0213-4c6d-8722-242243591edf.PNG)
+
+![Q8(chart)](https://user-images.githubusercontent.com/112139192/190545977-473f7293-9783-47dd-a375-6a42dfa7da2b.PNG)
+
+
+
+
+
 
