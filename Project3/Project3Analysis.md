@@ -95,3 +95,8 @@ ORDER BY avg_salary DESC
 * Entry-level gets paid the least on average at roughly $62,000
 * Senior-level gets paid of average at about $140,000 and has the most employees in that position but gets paid less than Executive-level by about $60,000
 
+### Solution
+* ```COUNT``` function on experience_level column to find the total number of employees with an alias as count_of_employees
+* Found the average salary using the ```AVG``` function on salary_in_usd column then used ```CAST``` function to convert the salary into a decimal with the alias as avg_salary
+* ```GROUP BY``` experience_level column to find the average salary per experience level
+* ```ORDER BY``` avg_salary in descending order
