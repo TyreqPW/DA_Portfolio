@@ -27,6 +27,7 @@ ORDER BY total desc
 
 ### Solution
 
+* Projected job_title column from the ds_salaries table
 * Used the  ```COUNT``` function to find the total number of employees for the job_title column
 * ```GROUP BY```  job_title column to find the total per job title
 * ```ORDER BY``` total alias in descending order 
@@ -50,6 +51,7 @@ ORDER BY total desc
 
 ### Solution
 
+* Projected employment_type column from the ds_salaries table
 * Used ```COUNT``` function to find total number of employees for employment_type with an alias as total
 * ```GROUP BY``` employement_type column to find how many employees there are per employment type
 * ```ORDER BY``` total alias in descending order
@@ -72,6 +74,7 @@ ORDER BY Total DESC
 
 ### Solution
 
+* Projected company_location column from the ds_salaries table
 * Used ```COUNT``` fucntion to find total number of employees from the company_location column with an alias as total
 * ```GROUP BY``` company_location column to find how many employees there are per company_location
 * ```ORDER BY``` total alias in descending order
@@ -96,7 +99,59 @@ ORDER BY avg_salary DESC
 * Senior-level gets paid of average at about $140,000 and has the most employees in that position but gets paid less than Executive-level by about $60,000
 
 ### Solution
+
+* Projected experience_level column from the ds_salaries table
 * ```COUNT``` function on experience_level column to find the total number of employees with an alias as count_of_employees
 * Found the average salary using the ```AVG``` function on salary_in_usd column then used ```CAST``` function to convert the salary into a decimal with the alias as avg_salary
 * ```GROUP BY``` experience_level column to find the average salary per experience level
 * ```ORDER BY``` avg_salary in descending order
+
+## 5. Did remote working increase from 2020 to 2022?
+
+```SQL
+SELECT 
+work_year,
+remote_ratio,
+COUNT(remote_ratio) as count_of_remote_ratio
+FROM DSsalaries..ds_salaries
+GROUP BY work_year, remote_ratio
+ORDER BY work_year ASC
+```
+![Q5](https://user-images.githubusercontent.com/112139192/190540316-32dab140-7885-444a-a8e3-6f5f4522462b.PNG)
+
+![Q5(chart)](https://user-images.githubusercontent.com/112139192/190540386-d5ebb469-3838-46c1-a1e4-122a549a3205.PNG)
+
+* From 2020 to 2022 working remote 100% increased from 36 to 228
+* Working on the job also increased from 15 to 78
+* Interestingly, working both remote and on job increased from 2020 to 2021, 21 to 26, but declined in 2022 past 2020 marks at 12
+
+### Solution
+
+* Projected work_year and remote_ratio column from ds_salaries table
+* ```COUNT``` to find total number of employees for
+* ```GROUP BY``` work_year and remote_ratio column to find total number of employees per work year and remote ratio
+* ```ORDER BY``` work_year column in ascending order
+
+## 6. What company size occurs the most
+
+```SQL
+SELECT 
+company_size,
+COUNT(company_size) as count_of_company_size
+FROM DSsalaries..ds_salaries
+GROUP BY company_size
+ORDER BY company_size asc
+```
+![Q6](https://user-images.githubusercontent.com/112139192/190541505-5be5b242-362d-4b68-9ba3-af614077ede9.PNG)
+
+![Q6(chart)](https://user-images.githubusercontent.com/112139192/190541950-aac0ea59-db58-4b1b-83d4-459f46f9031b.PNG)
+
+## Solution
+
+* Projected company_size column from ds_salaries table
+* ```COUNT``` to find total number of employees
+* ```GROUP BY``` company_size column to find total number of employees for each company size
+* ```ORDER BY``` company size in ascending order
+
+## 7. What is the percentage of jobs that work remote
+
