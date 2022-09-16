@@ -8,6 +8,12 @@
 ## :hammer_and_wrench: Tools: Excel, SQL, Tableau
 ![image](https://user-images.githubusercontent.com/112139192/187117338-79b114da-f3a9-4a7d-b353-a00d588b734c.png)
 
+# [Project 3: Data Science Job Salaries]
+
+## :hammer_and_wrench: Tools: Excel, SQL
+
+![image](https://user-images.githubusercontent.com/112139192/190534236-00c750c3-74e8-477a-99e4-8d729ebb0469.png)
+
 
 
 
